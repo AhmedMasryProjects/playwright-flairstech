@@ -13,7 +13,7 @@ describe('Mobile Navigation Test', function () {
             platformName: 'Android',
             'appium:deviceName': 'Android Emulator',
             'appium:automationName': 'UiAutomator2',
-            'appium:appPackage': 'com.example.android',
+            'appium:appPackage': 'example.android',
             'appium:appActivity': '.MainActivity'
         };
 

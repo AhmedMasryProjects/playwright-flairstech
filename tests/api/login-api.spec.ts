@@ -25,6 +25,7 @@ test.describe('Verify Login API', () => {
     expect(body).toHaveProperty('message', 'User exists!');
   });
 
+
   test('should fail verify login with invalid credentials', async ({ request }) => {
     const response = await request.post(`${baseURL}/verifyLogin`, {
       form: { email: 'invalid@example.com', password: 'wrongpassword' },
