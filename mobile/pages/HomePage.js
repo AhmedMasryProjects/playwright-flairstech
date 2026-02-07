@@ -2,7 +2,7 @@ class HomePage {
     constructor(driver) {
         this.driver = driver;
 
-        // Example locators (Android resource IDs)
+        
         this.menuButton = 'id=com.example.android:id/menu_button';
         this.nextPageTitle = 'id=com.example.android:id/next_page_title';
     }
