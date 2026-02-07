@@ -12,13 +12,13 @@ test.describe('Verify Login API', () => {
     }
 
     const response = await request.post(`${baseURL}/verifyLogin`, {
-      form: { email, password }, // API expects form fields
+      form: { email, password }, 
     });
 
-    // Assert status code
+    
     expect(response.status()).toBe(200);
 
-    // Assert response body contains success message
+    
     const body = await response.json();
     expect(body).toHaveProperty('message', 'User exists!');
   });
@@ -28,7 +28,7 @@ test.describe('Verify Login API', () => {
       form: { email: 'invalid@example.com', password: 'wrongpassword' },
     });
 
-    // API still returns 200 but with error message
+    
     expect(response.status()).toBe(200);
 
     const body = await response.json();
