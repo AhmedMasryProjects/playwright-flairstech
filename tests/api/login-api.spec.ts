@@ -1,7 +1,9 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Verify Login API', () => {
-  const baseURL = 'https://automationexercise.com/api';
+
+  const baseURL = process.env.BASE_URL!;
+
 
   test('should verify login successfully with valid credentials', async ({ request }) => {
     const email = process.env.TEST_USER_EMAIL!;
